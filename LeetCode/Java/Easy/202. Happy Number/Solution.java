@@ -1,6 +1,6 @@
 class Solution {
     public boolean isHappy(int n) {
-
+            
         while (n*n > 10) {
             int sq = 0;
 
