@@ -1,7 +1,8 @@
 class Solution {
     public boolean isHappy(int n) {
-            
-        while (n*n > 10) {
+            int temp1=n;
+            int temp=0;
+        while (n*n > 10 && temp!=temp1) {
             int sq = 0;
 
             while (n> 0) {
@@ -10,6 +11,7 @@ class Solution {
             }
             n = sq;
             sq = 0;
+            temp=n;
         }
 
         if (n == 1)
