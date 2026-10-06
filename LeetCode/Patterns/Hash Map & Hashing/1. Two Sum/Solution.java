@@ -1,19 +1,18 @@
+import java.util.*;
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        int f=0;
-        int s=0;
-        int i=0;
+        int i;
         int j=0;
+        int [] finals={-1,-1};
         for(i=0;i<nums.length;i++){
-            for(j=i;j<nums.length;j++){
-                    if(nums[i]+nums[j]==target && i!=j){
-                        f=i;
-                        s=j;
-                        break;
-                        }
+        for(j=i+1;j<nums.length;j++){
+            if(nums[i]+nums[j]==target){
+                finals[0]=i;
+        finals[1]=j;
+        return finals;
+        }
             }
         }
-        int[]arr ={f,s};  
-        return arr;
+        return finals;
     }
 }
